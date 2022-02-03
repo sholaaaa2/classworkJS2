@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+// Рисуем прямоугольник из звёздочек
+    var a = 5;
+    var b = 10;
+
+    for (var i = 0; i < a; i++) {
+      for (var j = 0; j < b; j++) {
+        document.write('*')
+      };
+      document.write('<br>')
+    }
+
+
+// Проверка на админа
+    var login = prompt('Введите логин');
+    if (login === null) {
+      alert("Вход отменен")
+    }
+    else if (login.toLowerCase() === "админ") {
+      while (true) {
+        var passw = prompt('Введите пароль');
+        if (passw === null) {
+          alert("Вход отменен");
+          break;
+        }
+        else if (passw.toLowerCase()==="чёрный властелин") {
+          alert("Добро пожаловать");
+          break;
+        }
+        else {
+          alert("Пароль неверен");
+          continue;
+        }
+      }
+    }
+    else {
+      alert("Приветсвуем, "+ login)
+    }
+  </script>
+</body>
+</html>
